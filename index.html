@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Advent Calendar</title>
+    <style type="text/css">
+        body {
+            background-color: #b51313;
+        }
+
+        .calendar {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0px auto;
+        }
+
+        .calendar td {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+
+
+        .calendar .door {
+            border-color: inherit;
+            text-align: left;
+            vertical-align: top
+        }
+
+        button {
+            border-color: white;
+            background-color: white;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #message {
+            position: absolute;
+            top: 0px;
+            visibility: hidden;
+            max-width:60%
+        }
+    </style>
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body onload="today()">
+    <div id="container">
+        <div id="calendar" style="visibility: visible;">
+            <table class="calendar">
+                <tbody>
+                    <tr>
+                        <td class="door" colspan="6" id="todaydate"></td>
+                    </tr>
+                    <tr>
+                        <td class="door"><button title="calendar" id="door1" onclick="openDay(1)">1</button></td>
+                        <td class="door"><button title="calendar" id="door2" onclick="openDay(2)">2</button></td>
+                        <td class="door"><button title="calendar" id="door3" onclick="openDay(3)">3</button></td>
+                        <td class="door"><button title="calendar" id="door4" onclick="openDay(4)">4</button></td>
+                        <td class="door"><button title="calendar" id="door5" onclick="openDay(5)">5</button></td>
+                        <td class="door"><button title="calendar" id="door6" onclick="openDay(6)">6</button></td>
+                    </tr>
+                    <tr>
+                        <td class="door"><button title="calendar" id="door7" onclick="openDay(7)">7</button></td>
+                        <td class="door"><button title="calendar" id="door8" onclick="openDay(8)">8</button></td>
+                        <td class="door"><button title="calendar" id="door9" onclick="openDay(9)">9</button></td>
+                        <td class="door"><button title="calendar" id="door10" onclick="openDay(10)">10</button></td>
+                        <td class="door"><button title="calendar" id="door11" onclick="openDay(11)">11</button></td>
+                        <td class="door"><button title="calendar" id="door12" onclick="openDay(12)">12</button></td>
+                    </tr>
+                    <tr>
+                        <td class="door"><button title="calendar" id="door13" onclick="openDay(13)">13</button></td>
+                        <td class="door"><button title="calendar" id="door14" onclick="openDay(14)">14</button></td>
+                        <td class="door"><button title="calendar" id="door15" onclick="openDay(15)">15</button></td>
+                        <td class="door"><button title="calendar" id="door16" onclick="openDay(16)">16</button></td>
+                        <td class="door"><button title="calendar" id="door17" onclick="openDay(17)">17</button></td>
+                        <td class="door"><button title="calendar" id="door18" onclick="openDay(18)">18</button></td>
+                    </tr>
+                    <tr>
+                        <td class="door"><button title="calendar" id="door19" onclick="openDay(19)">19</button></td>
+                        <td class="door"><button title="calendar" id="door20" onclick="openDay(20)">20</button></td>
+                        <td class="door"><button title="calendar" id="door21" onclick="openDay(21)">21</button></td>
+                        <td class="door"><button title="calendar" id="door22" onclick="openDay(22)">22</button></td>
+                        <td class="door"><button title="calendar" id="door23" onclick="openDay(23)">23</button></td>
+                        <td class="door"><button title="calendar" id="door24"
+                                onclick="openDay(24)">CHRISTMAS<br>EVE!</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="message">
+            <style>
+                button {
+                    align-items: right;
+                }
+            </style>
+            <button onclick="closemessage()">×</button>
+            <h1>Test Header</h1>
+            <img id="message_image" src="" width="100px"><br>
+            <p1>test description</p1>
+        </div>
+    </div>
+
+</body>
+
+</html>
